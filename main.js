@@ -1,4 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // --- Set Body Height for Mobile Viewport ---
+    const setBodyHeight = () => {
+        document.body.style.height = `${window.innerHeight}px`;
+    };
+    window.addEventListener('resize', setBodyHeight);
+    setBodyHeight(); // Set initial height
+
     // --- Reusable Modal Logic ---
     const openModalButtons = document.querySelectorAll('[data-modal-target]');
     const closeModalButtons = document.querySelectorAll('.modal-overlay .close-btn');
