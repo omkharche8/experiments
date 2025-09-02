@@ -1,20 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- Mobile card focus ---
-    const isMobile = () => window.innerWidth <= 768;
-
-    if (isMobile()) {
-        const cards = document.querySelectorAll('.card');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    cards.forEach(card => card.classList.remove('is-focused'));
-                    entry.target.classList.add('is-focused');
-                }
-            });
-        }, { root: null, rootMargin: '-50% 0px -50% 0px', threshold: 0 });
-        cards.forEach(card => observer.observe(card));
-    }
-
     // --- Reusable Modal Logic ---
     const openModalButtons = document.querySelectorAll('[data-modal-target]');
     const closeModalButtons = document.querySelectorAll('.modal-overlay .close-btn');
