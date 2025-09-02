@@ -45,6 +45,7 @@ body {
   min-height: 100vh;
   position: relative;
   z-index: 1;
+  padding-bottom: 120px; /* Space for fixed footer */
 }
 
 body::before {
@@ -157,7 +158,6 @@ header h1 {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  padding-bottom: 120px; /* Space for sticky footer */
 }
 
 .projects-grid {
